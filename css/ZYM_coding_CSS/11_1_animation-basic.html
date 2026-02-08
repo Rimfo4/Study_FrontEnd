@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Basic</title>
+    <!-- Animation은 A 스타일을 B 스타일로 바꾸는 것이다. -->
+    <!-- 바꾸는 중간을 keyframes라고 한다. -->
+    <style>
+        .shape{
+            margin: 0 auto;
+            margin-top: 80px;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .animation1:hover{
+            /* 애니메이션 함수 불러오는 속성 */
+            animation-name: shape-color; 
+            /* 지속시간 */
+            animation-duration: 3s;
+        }
+        .animation2{
+            animation-name: circle;
+            animation-duration: 2s;
+            /* 반복 */
+            animation-iteration-count: 3;
+        }
+        /* 애니메이션 함수*/
+        @keyframes shape-color{
+            /* 시작
+            from{
+                background-color: red;
+            }
+            끝
+            to{
+                background-color: blue;
+            } */
+            0%{
+                background-color: red;
+            }
+            50%{
+                background-color: blue;
+            }
+            100%{
+                background-color: yellow;
+            }
+        }
+        @keyframes circle{
+            0%{
+                border-radius: 0%;
+            }
+            50%{
+                border-radius: 50%;
+            }
+            100%{
+                border-radius: 0%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <div class="shape animation1"></div>
+        <div class="shape animation2"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox basic</title>
+    <!-- flexbox는 기존 position, float과 달리 쉽게 레이아웃 정렬, 배치 할 수 있는 속성이다. -->
+
+    <!-- flex container의 자식은 flex item이다. -->
+    <!-- flex container에만 지정할 수 있는 속성과 flex item에만 지정할 수 있는 속성이 있다.-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* flex item은 주축(main axis)에 따라 정렬된다. */
+        /* 주축은 flex-direction 속성을 통해 결정 */
+        .flex-container{
+            background-color: green;
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-wrap을 nowrap으로 하면 한 줄에 flex item을 배치하는데 그만큼 item들의 크기가 축소된다. */
+            /* wrap 속성값을 입력하면 크기는 변하지않고 container가 넘치면 다음 줄로 개행한다. */
+            
+            /* 축약형 = flex-flow : row wrap; */
+        }
+        .flex-item{
+            color: white;
+            width: 80px;
+            height: 80px;
+            background-color: purple;
+            text-align: center;
+            border: 1px solid yellow;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+        <div class="flex-item">11</div>
+        <div class="flex-item">12</div>
+        <div class="flex-item">13</div>
+        <div class="flex-item">14</div>
+        <div class="flex-item">15</div>
+    </div>
+</body>
+</html>

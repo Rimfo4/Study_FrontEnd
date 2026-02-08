@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 뷰포트는 디바이스로 보는 실제 화면(핸드폰과 컴터와 크기 다름) -->
+    <!-- content 속성 안 속성 값들은 width를 현재 디바이스 가로길이로, 최대 크기는 2배, 최소 크기는 1배, 초기 크기는 1배, 유저 직접 확대 no -->
+    <meta name="viewport" content="width=device-width, maximum-scale=2, minimum-scale=1, initial-scale=1.0, user-scalable=no" >
+
+    <title>viewport</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0; 
+        }
+        div.squre{
+            /* vmax : 디바이스 가로와 세로 중 큰 거의 비례 */
+            /* vmin : 디바이스 가로와 세로 중 작은 거의 비례 */
+            width: 20vmax; 
+            height: 50vh; 
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="squre"></div>
+    <div>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur fugit sint praesentium consequuntur quas, veniam deleniti accusamus consequatur hic dolorum magni aperiam iusto assumenda, nostrum porro mollitia explicabo eos similique.
+        Laborum ducimus dolore sed dignissimos tenetur voluptatum vero perspiciatis earum? Facere rerum numquam id, dolores, voluptatibus aspernatur obcaecati explicabo aliquid delectus excepturi cumque officiis molestias itaque. Similique eos aliquid optio.
+        Consequuntur quae voluptas corrupti minus labore odio dolorem nisi voluptates nihil natus, et quo. Ratione architecto soluta deleniti? Iusto suscipit quam animi ducimus consectetur fugit repellendus dignissimos quo totam assumenda!
+        Enim quidem iste quos corporis labore ex deleniti magnam maxime molestiae error, voluptas sunt cupiditate. Fugiat quam vitae assumenda, repellendus ipsam magni facilis maxime labore voluptatibus ad ut totam nihil.
+        Nobis suscipit excepturi nihil nostrum, facilis tenetur possimus blanditiis voluptatem commodi numquam, ad corporis a, sunt consectetur error reprehenderit dolorum expedita! Commodi pariatur voluptate nisi laboriosam totam dignissimos, exercitationem reiciendis.
+    </div>
+</body>
+</html>

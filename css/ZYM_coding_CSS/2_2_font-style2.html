@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font style2</title>
+
+    <style>
+        html{
+            font-size: 16px;
+        }
+        .content{
+            border: 3px solid black;
+        }
+        .text-center{
+            /* 글자 정렬 속성 text-align */
+            text-align: center;
+        }
+        .text-right{
+            text-align: right;
+        }
+        .text-left{
+            text-align: left;
+        }
+        .article{
+            /* 줄간격 속성 line-height */
+            line-height: 1.8rem;
+
+            /* 글자 간격 속성 letter-spacing*/
+            letter-spacing: 2px;
+
+            /* 단어 사이 간격 속성 */
+            word-spacing: 20px;
+
+            /* 문단 들여쓰기 속성 text-indent*/
+            text-indent: 50px;
+        }
+        .transform{
+            /* 문자 변환(대문자, 소문자로) */
+            text-transform: uppercase;
+        }
+        .article > a{
+            /* 문장 꾸미기 속성(밑줄, 취소선 등) */
+            text-decoration: none;
+        }
+        h2{
+            /* 텍스트 그림자 속성(가로, 세로, 번짐, 색상)*/
+            text-shadow: 5px 5px 3px black;
+        }
+        ul{
+            /* 리스트 꾸미기 속성 */
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <p class="content text-center">ChoJeongMo</p>
+        <p class="content text-right">ChoJeongMo</p>
+        <p class="content text-left">ChoJeongMo</p>
+    </section>
+    <section>
+        <p class="article">
+            이에 비해 메시아주의의 시간은 시간을 절단하는 시간 또는 시간에 개입(절단)하는 시간이라고 해야 할까. 
+            그 대표적 사례로 나는 알폰소 쿠아론 감독의 근미래 영화인 
+            칠드런 오브 맨(<span class="transform">Children of Men</span>, 2006)에 나오는 기적과도 같은 어떤 순간을 언급하고 싶다. 
+            이 <a href="01010">영화</a>는 더 이상의 아이가 태어나지 않는 불임의 미래를 다루는데,
+             오늘날의 현실('테러와의 전쟁'을 벌이는 정부군과 반정부 급진 테러리스트 사이의 극한 대립, 철창신세의 난민들로 가득 찬 슬럼가와 온갖 미술품으로 치장된 펜트하우스의 상류사회)을 몽타주한 실감이 특히 뛰어나다.
+        </p>
+    </section>
+    <section>
+        <h2>내 이름은 조정모</h2>
+        <ul>
+            <li>헤이</li>
+            <li>하이</li>
+            <li>와이</li>
+        </ul>
+    </section>
+</body>
+</html>

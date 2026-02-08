@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trasform&Transition</title>
+
+    <style>
+        body{
+            margin:0;
+            padding: 0;
+            background-color: lightgrey;
+        }
+        .outline,
+        .box{
+            width : 60px;
+            height : 60px;
+        }
+        .outline{
+            border: 3px solid yellow;
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+        .box{
+            background-color:blue;
+        }
+        .box1{
+            /* 요소를 이동  (x,y)*/
+            transform: translate(20px, 10px);
+        }
+        .box2{
+            /* 요소 비율 */
+            transform: scale(0.5, 2);
+        }
+        .outline-box3{
+            /* 입체감을 나타내는 속성 rotate의 입체감을 하려면 필수*/
+            /* perspective: 50px; */
+        }
+        .box3{
+            /* 요소의 회전, 각도 */
+            transform: rotate(45deg);
+        }
+        .box4{
+            /* 요소의 외곡 */
+            transform: skew(10deg, 5deg);
+        }
+
+
+        /* trasition */
+        /* trasform에 애니메이션(부드럽게)이 추가된 느낌 */
+
+        .box1:hover{
+            width: 300px;
+            height: 300px;
+            transform: rotate(180deg);
+            background-color: red;
+        }
+        .box1{
+
+            transition-property: all;
+            /* 효과가 몇 초 동안 실행하는 지 */
+            transition-duration: 1s;
+            /* 효과를 시작하기 전 지연시간 */
+            transition-delay: 0.2s;
+            /* 효과 지속시간(linear : 일정하게, ease-in : 천천히하다 마지막에 빠르게, ease-out : 빠르게하다 마지막에 천천히)*/
+            transition-timing-function:  ease-out;
+
+            /* transform: 1s 0.5s ease-out; */
+        }
+    </style>
+</head>
+<body>
+    <div class="outline">
+        <div class="box box1"></div>
+    </div>
+    <div class="outline">
+        <div class="box box2"></div>
+    </div>
+    <div class="outline outline-box3">
+        <div class="box box3"></div>
+    </div>
+    <div class="outline">
+        <div class="box box4"></div>
+    </div>
+</body>
+</html>

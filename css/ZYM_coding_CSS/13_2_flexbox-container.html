@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flexbox container</title>
+    <!-- flexbox는 기존 position, float과 달리 쉽게 레이아웃 정렬, 배치 할 수 있는 속성이다. -->
+
+    <!-- flex container의 자식은 flex item이다. -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .flex-container{
+            background-color: green;
+            height: 100vh;
+            display: flex;
+            flex-flow: row wrap;
+
+            /* justify-content 는 '메인축'을 기준으로 item을 '수평' 정렬한다.*/
+            /* start : 좌측, end : 우측, center: 중앙, space-around: item이 균등 간격 배치, space-between: 처음과 마지막 item이 좌우 끝에 붙고 균등 간격 배치  */
+            /* justify-content: space-between; */
+
+            /* align-content 는 '교차축'을 기준으로 item을 '수직' 정렬한다.*/
+            /* justify-content의 속성값과 동일함. */
+            /* align-content: center; */
+
+            /* align-items 는 '교차축'을 기준으로 item을 '수직' 정렬한다. */
+            /* 차이점은 align-items은 flex line을 '기준'으로 정렬
+            align-content은 flex line을 정렬한다. */
+        }
+        .flex-item{
+            color: white;
+            width: 80px;
+            height: 80px;
+            background-color: purple;
+            text-align: center;
+            border: 1px solid yellow;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">1</div>
+        <div class="flex-item">2</div>
+        <div class="flex-item">3</div>
+        <div class="flex-item">4</div>
+        <div class="flex-item">5</div>
+        <div class="flex-item">6</div>
+        <div class="flex-item">7</div>
+        <div class="flex-item">8</div>
+        <div class="flex-item">9</div>
+        <div class="flex-item">10</div>
+        <div class="flex-item">11</div>
+        <div class="flex-item">12</div>
+        <div class="flex-item">13</div>
+        <div class="flex-item">14</div>
+        <div class="flex-item">15</div>
+    </div>
+</body>
+</html>

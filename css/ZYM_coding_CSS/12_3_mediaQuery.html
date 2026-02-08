@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        /* 
+            min-width : 최소 가로 ?까지
+            max-width : 최대 가로 ?까지
+        */
+
+        /* 
+            0~400 red
+            401~600 blue
+            601~800 yellow
+        */
+        /* 미디어 쿼리 */
+        @media (max-width : 400px){
+            body{
+                background-color: red;
+            }
+        }
+        @media (min-width: 401px) and (max-width : 600px){
+            body{
+                background-color: blue;
+            }
+        }
+        @media (min-width : 601px) and (max-width : 800px){
+            body{
+                background-color: yellow;
+            }
+        }
+        /* 인쇄용 media 쿼리 */
+        @media print{
+            h1{
+                font-size: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque necessitatibus accusantium debitis alias sit numquam at hic quis corporis cupiditate perspiciatis, et error nesciunt! Obcaecati doloribus necessitatibus laboriosam rem rerum?
+    At, voluptate aliquid aperiam quod nulla, doloremque corrupti laudantium distinctio ullam enim alias eum, laboriosam numquam. Sed minima provident cupiditate dolorem eveniet expedita quisquam laborum in numquam, corporis alias nobis.
+    Odit aspernatur enim illo incidunt maiores maxime, ipsa aliquid distinctio laborum sunt labore officia pariatur dolores atque minus eum explicabo nihil fuga! Optio quidem distinctio nemo, aliquam dolor natus corrupti.</p>
+</body>
+</html>

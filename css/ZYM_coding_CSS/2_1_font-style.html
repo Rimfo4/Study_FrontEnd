@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>font style</title>
+
+    <style>
+        html{
+            /* 첫번째 폰트가 적용안되면 두번째로 넘어감 */
+            /* font-family: cursive, monospace; */
+        }
+        .title{
+            font-size: 28px;
+        }
+        .content{
+            color: aqua;
+        }
+        .content-italic{
+            font-style: italic;
+        }
+        .content-variant{
+            font-variant: small-caps;
+        }
+
+        .subtitle{
+            font-size: 20px;
+        }
+        .subtitle-rem{
+            /* 최상위 태그(html) 사이즈에 1.5배 크기 */
+            font-size: 1.5rem;
+        }
+        .subtitle-em{
+            /* 부모 태그의 크기를 상속 받은 사이즈에 1.2배 크기 */
+            font-size: 1.2em;
+        }
+        .subtitle-vw{
+            /* vw는 현재 웹사이트의 너비의 비례하여 계산 */
+            /* 동적 바인딩 */
+            width: 30vw;
+            height: 150px;
+            background-color: rgb(255, 255, 0);
+        }
+        .subtitle-vh{
+            width: 150px;
+            height: 30vh;
+            background-color:#008000;
+        }
+    </style>
+</head>
+<body>
+    <h2 class="title">나는 조정모입니다.</h2>
+    <p class="content">나는 열심히 웹페이지 공부를 해서 엄청난 개발자가 될꺼야.</p>
+    <p class="content-italic">나는 열심히 웹페이지 공부를 해서 엄청난 개발자가 될꺼야.</p>
+    <p class="content-variant">Hello ChoJm</p>
+
+    <hr>
+
+    <h2>px</h2>
+    <p class="subtitle">나는 열심히 웹페이지 공부를 해서 엄청난 개발자가 될꺼야.</p>
+    <h2>rem</h2>
+    <p class="subtitle-rem">나는 열심히 웹페이지 공부를 해서 엄청난 개발자가 될꺼야.</p>
+    <h2>em</h2>
+    <p class="subtitle-em">나는 열심히 웹페이지 공부를 해서 엄청난 개발자가 될꺼야.</p>
+
+    <hr>
+
+    <!-- Viewport width의 약자 -->
+    <h2>vw</h2>
+    <div class="subtitle-vw"></div>
+    <!-- Viewport height의 약자 -->
+    <h2>vh</h2>
+    <div class="subtitle-vh"></div>
+</body>
+</body>
+</body>
+</html>

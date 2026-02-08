@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float</title>
+    <!-- float 속성은 개구닥다리 속성이여서 -->
+    <!-- flexBox 배우고 grid 하면 goat -->
+    <style>
+        div.container{
+            width: 600px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        img{
+            width: 100px;
+        }
+        img.float-left{
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        img.float-right{
+            float: right;
+        }
+        p{
+            border: 1px solid blue;
+        }
+        p.clear{
+            /* float 속성을 끝낸다. 해서 clear */
+            /* 이미지 띄고 글이 써짐 */
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="float-left" src="../../Html/asset/imgs/owl.jpg" alt="">
+        <p>
+            <!-- p태그는 block요소 이지만 float(뜨다) 속성 때문에 이미지 옆에 있는다. -->
+            올빼미(Strix nivicolum)는 올빼미과 올빼미속에 속하는 야행성 맹금류로, 히말라야부터 한국, 대만 등 아시아 숲에 서식하는 조류입니다.
+        </p>
+        <p class="clear">
+            올빼미(Strix nivicolum)는 올빼미과 올빼미속에 속하는 야행성 맹금류로, 히말라야부터 한국, 대만 등 아시아 숲에 서식하는 조류입니다.
+        </p>
+        <!-- <img class="float-right" src="../../Html/asset/imgs/love.jpg" alt="">
+        <p>
+            사랑은 대상에 대한 강한 끌림, 애정, 소중히 여기는 마음을 동반하는 감정적·정신적 상태입니다.
+        </p> -->
+    </div>
+</body>
+</html>

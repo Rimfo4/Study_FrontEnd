@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flexbox item</title>
+    <!-- flexbox는 기존 position, float과 달리 쉽게 레이아웃 정렬, 배치 할 수 있는 속성이다. -->
+
+    <!-- flex container의 자식은 flex item이다. -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .flex-container {
+        background-color: green;
+        height: 100vh;
+        display: flex;
+        flex-flow: row wrap;
+      }
+      .flex-item {
+        color: white;
+        width: 80px;
+        height: 80px;
+        background-color: purple;
+        text-align: center;
+        border: 1px solid yellow;
+      }
+
+      /* flex item만 갖는 속성 */
+      .item1 {
+        /* order 속성은 item들 중 몇번째에 오는 지 순서를 바꿀 수 있다. */
+        /* order: 2; */
+
+        /* flex-grow 속성은 item을 몇 배 더 크게 조절하게 한다. */
+        /* flex-grow: 1; */
+
+        /* flex-shrink 속성은 item을 몇 배 더 작게 조절하게 한다. */
+        /* flex-shrink: 2; */
+
+        /* flex-basis 속성은 메인축을 기준으로 item의 가로 너비를 지정한다. */
+        /* flex-basis: 160px; */
+
+        /* 위 세개의 속성 축약 버전 : flex: 1 2 160px; */
+
+        /* align-self 속성은 align-item 속성보다 우선시 되며, item을 개별적으로 세팅할 때 사용 */
+        align-self: flex-end;
+      }
+      .item2 {
+        /* order: 0; */
+        align-self: center;
+      }
+      .item3 {
+        /* order: 4; */
+        align-self: self-start;
+      }
+      .item4 {
+        /* order: 3; */
+      }
+      .item5 {
+        /* order: 1; */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+      <div class="flex-item item4">4</div>
+      <div class="flex-item item5">5</div>
+    </div>
+  </body>
+</html>

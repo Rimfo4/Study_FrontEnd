@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class&Element</title>
+    <style>
+        /* 고급 선택자는 선택자 뒤에 :을 붙인다. */
+        /* 여러가지 속성으로 골라 쓰기 */
+        a{
+            font-size: 30px;
+        }
+        /* 가상 클래스 */
+        a:link{
+            /* 방문한 적이 없을 때 */
+            color:cyan;
+        }
+        a:visited{
+            /* 방문한 적이 있을 때 */
+            color:red;
+        }
+        a:hover{
+            /* 마우스가 요소 위에 있을 때 */
+            color:blue;
+            font-weight: 900;
+        }
+        fieldset:hover{
+            background-color: lightgray;
+            box-shadow:0 0 20px gray;
+        }
+        a:active{
+            /* 요소를 활성화 할 때 */
+            color: aqua;
+        }
+        input:focus{
+            /* 요소를 클릭 혹은 탭 할 때(주로 양식 입력에 사용) */
+            outline: none;
+            border: 3px solid red;
+            box-shadow: 0 0 20px rgb(223, 124, 124);
+        }
+        .field{
+            margin-bottom:10px;
+        }
+
+        li:nth-child(odd){
+            /* 동일 태그 중에 선택(index, even, odd) */
+            background-color: yellow;
+        }
+        li:not(.target){
+            /* 괄호 안 id, class 뺀 형제들에게 적용 */
+            font-size: 30px;
+        }
+
+
+        /* 가상 요소 */
+        .required::before{
+            /* before은 기존 요소의 컨텐츠 전에 '가상 요소'를 추가함 */
+            content: '***';
+            margin-right: 2px;
+            color: red;
+        }
+        button[data-tooltip]{
+            position:relative;
+        }
+        button[data-tooltip]:hover::after{
+            /* after은 기존 요소의 컨텐츠 후에 '가상 요소'를 추가함 */
+            content:attr(data-tooltip);
+            position: absolute;
+            top: 0px;
+            left: 75px;
+            background-color: black;
+            color: white;
+            width: 200px;
+        }
+
+        /* letter, line 둘 다 block-line 요소에만 가능 */
+        .letter::first-letter{
+            /* 텍스트의 첫 문자만 */
+            font-size: 60px;
+            color: blue; 
+        }
+        .line::first-line{
+            /* 텍스트의 첫 라인만 */
+            background-color: yellow;
+            color: blue;
+            font-size: 20px;
+        }
+        p::selection{
+            /* 사용자가 선택한 부분만 가상요소 추가 */
+            background-color: red;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Pseudo Class</legend>
+        <div>
+            <a href="https://naver.com" target="_blank">네이버</a>
+            <a href="https://kakao.com" target="_blank">카카오</a>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>focus, before, after</legend>
+        <div class="field">
+            <label class="required" for="name">이름</label>
+            <input type="text" id="name">
+        </div>
+        <div class="field">
+            <label class="required" for="age">나이</label>
+            <input type="text" id="age">
+        </div>
+        <button data-tooltip="이 버튼을 클릭하여 데이터 보내기">보내기</button>
+    </fieldset>
+    <fieldset>
+        <legend>nth-child, not</legend>
+        <ul>
+            <li class="target">1content</li>
+            <li>2content</li>
+            <li>3content</li>
+            <li>4content</li>
+            <li>5content</li>
+        </ul>
+    </fieldset>
+    <fieledset>
+        <legend>first-letter, first-line, selection</legend>
+        <div>
+            <p class="letter">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa earum nobis impedit, neque corrupti quod, quam beatae, dolorum voluptatum fugiat voluptatem! Earum ut nesciunt magnam beatae corporis. Fugiat, obcaecati dolorem!
+                Necessitatibus, itaque maxime reiciendis voluptatibus temporibus deserunt quod doloremque numquam rem laudantium, reprehenderit, magni vitae hic dolor neque ullam ab dicta eaque porro veniam odio. Accusamus quos molestiae quas sint.
+            </p>
+            <p class="line">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, voluptatibus repudiandae accusantium adipisci quidem id sequi harum reprehenderit enim modi nostrum! Dolor sit, alias fuga ex nisi reprehenderit iste! Magnam?
+                Consequuntur autem tenetur quas praesentium dolorem necessitatibus sequi deserunt, vero neque maiores tempore magnam. Maiores inventore iure hic quia deserunt quidem accusamus reprehenderit. Odit non nulla voluptatum blanditiis, ipsum fugiat!
+            </p>
+        </div>
+    </fieledset>
+</body>
+</html>

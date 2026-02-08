@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <style>
+        body{
+            margin: 0px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #backLabel{
+            width: 390px;
+            height: 356px;
+            background-image: url(../img/Rectangle\ 1.png);
+            position: relative; /*기준점 잡기*/
+        }
+        .my{
+            width: 57px;
+            height: 24px;
+            left: 33px; 
+            top: 45px;
+            font-size: 18px;
+            position: absolute; /*이미지가 안밀리고 같이 공존*/
+        }
+        .myPhoto{
+            width: 116px;
+            height: 117px;
+            left: 137px;
+            top: 132px;
+            position: absolute;
+        }
+        .name{
+            width: 63px;
+            height: 29px;
+            left: 163px;
+            top: 261px;
+            position: absolute;
+            font-size: 22px;
+        }
+        #sett{
+            padding-top: 47px;
+            padding-left: 33.87px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+        p{
+            margin: 0px;
+        }
+        .stuId{
+            width: 112px;
+            height: 19px;
+        }
+    </style>
+</head>
+<body>
+    <div id="backLabel">
+        <span class = "my">내 정보</span>
+        <img class = "myPhoto" src="../img/Frame 3.png" alt="">
+        <span class = "name" >조정모</span>
+    </div>
+    <div id="sett">
+        <p class="stuId">학번</p>
+        
+    </div>
+</body>
+</html>
