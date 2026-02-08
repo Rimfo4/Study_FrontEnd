@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 모든 UI만드는 순서 -->
+    <!-- 1. 미리 디자인, 구성 다 하고 숨긴다. | 2. 무슨 이벤트로 보여준다. -->
+
+    <div class="alert-box" id="id-box">
+        <span id="span"></span>
+        <button id="close" onclick="alert('none', 'id-box', null)">X</button>
+    </div>
+    <div>
+        <button class="b" id="b1" onclick="alert('block', 'id-box', '아이디를 입력해주셈')">아이디</button>
+    </div>
+    <div>
+        <button class="b" id="b2" onclick="alert('block', 'id-box', '비번을 입력해주셈')">비번</button>
+    </div>
+
+    <script>
+        function alert(box, box_id, title){
+            document.getElementById(box_id).style.display = box;
+            document.getElementById('span').innerHTML = title;
+        }
+
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('id-box').style.display = 'none';
+        });
+    </script>
+</body>
+</html>

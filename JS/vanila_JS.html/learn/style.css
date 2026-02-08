@@ -1,0 +1,17 @@
+body{
+    background-color: bisque;
+}
+
+.active{
+    color: red;
+    transition: 0.5s;
+}
+
+h1{
+    /* 기본값 blue 클릭하면 red */
+    color: blue;
+    transition: 0.5s;
+}
+.back-color{
+    background-color: orange;
+}

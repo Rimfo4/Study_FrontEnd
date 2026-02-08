@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>함수의 기본</h1>
+    <ul>
+        <script>
+            function two(){
+                document.writeln('<li>'+2+'</li>');
+                document.writeln('<li>'+3+'</li>');
+                document.writeln('<li>'+4+'</li>');
+            }
+            document.writeln('<li>'+1+'</li>');
+            two();
+            document.writeln('<li>'+5+'</li>');
+            two();
+        </script>
+    </ul>
+    <hr>
+    <h2>매개변수를 가진 함수<br>(Parameter & Argument)</h1>
+    <script>
+        function sum(a, b){
+            document.writeln(a+b);
+        }
+        sum(2, 3);
+        sum("1", "2");
+    </script>
+    <hr>
+    <h2>값을 돌려주는 함수<br>(return)</h2>
+    <script>
+        function max(a, b){
+            var end;
+            if(a < b) end = b;
+            else end = a;
+
+            return end;
+        }
+        document.writeln('<div style = "color: red">'+max(2, 5)+'</div>');
+        document.writeln('<div style = "font-size: large">'+max(7, -1)+'</div>');
+    </script>
+</body>
+</html>

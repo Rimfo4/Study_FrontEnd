@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>배열</h1>
+    <script>
+      var arr = [1, 2, 3, 4, 5];
+
+      document.write(arr[0] + '<br>');
+      document.write(arr[3] + '<br>');
+      document.write(arr[arr.length - 1] + '<br>');
+      document.write(arr.length);
+    </script>
+    <hr />
+    <script>
+      document.write(arr.pop() + '<br>');
+      document.write(arr.pop() + '<br>');
+      document.write(arr.pop() + '<br>');
+      document.write(arr.length);
+    </script>
+    <hr />
+    <script>
+      document.write(arr.push('나는 숫자가 아니오') + '<br>');
+      document.write(arr.length);
+    </script>
+  </body>
+</html>

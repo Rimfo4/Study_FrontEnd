@@ -1,0 +1,43 @@
+* {
+  margin: 0px;
+}
+#flex {
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  border-bottom: 2px black solid;
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+}
+#colFlex {
+  display: flex;
+  flex-direction: row;
+}
+ul {
+  padding-top: 20px;
+  padding-right: 15px;
+  font-size: 20px;
+  width: 100px;
+  border-right: 2px black solid;
+}
+p {
+  padding: 20px;
+  font-weight: bold;
+}
+#youtu {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 650px) {
+  #flex,
+  #colFlex {
+    display: block;
+  }
+  ul {
+    border-right: none;
+  }
+}

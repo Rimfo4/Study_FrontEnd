@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <script>
+      function changeMode(self) {
+        var target = document.querySelector('#target');
+
+        if (self.value === 'black') {
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+          self.value = 'white';
+
+          var aList = document.querySelectorAll('a');
+          for (var i = 0; i < aList.length; i++) {
+            aList[i].style.color = 'powderblue';
+          }
+        } else {
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+          self.value = 'black';
+
+          var aList = document.querySelectorAll('a');
+          for (var i = 0; i < aList.length; i++) {
+            aList[i].style.color = 'blue';
+          }
+        }
+      }
+    </script>
+  </head>
+  <body id="target">
+    <div id="flex">
+      <h1>Web</h1>
+      <!-- <input type="button" value="black" onclick="
+        // document.querySelector('#target').: 문서의 id가 target인 태그(선택함)에게 .이하를 질의한다.
+            document.querySelector('#target').style.backgroundColor = 'black';
+            document.querySelector('#target').style.color = 'white';
+        ">
+        <input type="button" value="white" onclick="
+            document.querySelector('#target').style.backgroundColor = 'white';
+            document.querySelector('#target').style.color = 'black';
+        "> -->
+
+      <input
+        id="blackAndwhite"
+        type="button"
+        value="black"
+        onclick="
+          // 내가 만든 changeMode의 this를 참조하여 매개변수를 보냄
+          changeMode(this)
+        "
+      />
+      <div id="colFlex">
+        <ul>
+          <li><a href="html1.html" style="color: pink">html</a></li>
+          <li><a href="css1.html" style="color: pink">css</a></li>
+          <li><a href="JS1.html" style="color: pink">JS</a></li>
+        </ul>
+        <p>
+          <a href="https://web.dev/learn/html/document-structure?hl=ko"
+            >월드 와이드 웹(World Wide Web)</a
+          >이란 인터넷에 연결된 사용자들이 서로의 정보를 공유할 수 있는 공간을
+          의미합니다. 간단히 줄여서 WWW나 W3라고도 부르며, 간단히 웹(Web)이라고
+          가장 많이 불립니다. 인터넷과 같은 의미로 많이 사용되고 있지만, 정확히
+          말해 웹은 인터넷상의 인기 있는 하나의 서비스일 뿐입니다. 하지만
+          현재에는 인터넷과 웹이라는 단어가 서로 혼용되어 사용될 만큼 인터넷의
+          가장 큰 부분을 차지하고 있습니다.
+        </p>
+      </div>
+      <div id="youtu">
+        <p>참고하면 좋은 관련된 동영상</p>
+        <iframe
+          width="85%"
+          height="315"
+          src="https://www.youtube.com/embed/7ujWkFyw01g?si=iGlMIr61ZMaLTEje"
+          title="YouTube video player"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <input
+        type="button"
+        value="black"
+        onclick="
+          // this. 는 자기자신을 참조하여 귀찮게 id 안써도 됨.
+          if (this.value === 'black') {
+            document.querySelector('#target').style.backgroundColor = 'black';
+            document.querySelector('#target').style.color = 'white';
+            this.value = 'white';
+          } else {
+            document.querySelector('#target').style.backgroundColor = 'white';
+            document.querySelector('#target').style.color = 'black';
+            this.value = 'black';
+          }
+        "
+      />
+    </div>
+  </body>
+</html>
