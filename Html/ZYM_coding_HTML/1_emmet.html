@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emmet</title>
+  </head>
+  <body>
+    <!-- emmet은 단순하게 자바에 sout 같은 단축키 느낌이라 보면됨-->
+
+    <!-- 자식 노드 > -->
+    <!-- div>ul>ol 이렇게 작성하면 아래와 같이 작성됨 -->
+    <div>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+
+    <!-- 형제 노드 + -->
+    <!-- div>ol>li+li+li 하면 이렇게 된다. -->
+    <div>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+
+    <!-- 반복 노드 * -->
+    <!-- div>ol>li*3 하면 아래 처럼-->
+    <div>
+      <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ol>
+    </div>
+
+    <!-- 아이디 # -->
+    <!-- span#item 하면 item id를 갖는 span이 작성됨 -->
+    <span id="item"></span>
+
+    <!-- 클래스 . -->
+    <!-- span.item 하면 item class를 갖는 span이 작성 -->
+    <span class="item"></span>
+
+    <!-- 콘텐츠 {} -->
+    <!-- p{Hello HTML} 하면 Hello HTML이란 콘텐츠를 갖은 p태그 작성 -->
+    <p>Hello HTML</p>
+
+    <!-- 자동 넘버링 $ -->
+    <!-- p{Hello HTML$}*3 하면 됨 -->
+    <p>Hello HTML1</p>
+    <p>Hello HTML2</p>
+    <p>Hello HTML3</p>
+  </body>
+</html>

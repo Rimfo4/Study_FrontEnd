@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table tag</title>
+
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 3px solid black;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Table 태그의 기본</h1>
+
+    <!-- table태그는 자식 태그로 tr(행)을 갖고 tr은 자식인 td(셀)나 th(셀의 제목)를 갖어야 한다. -->
+    <!-- table > tr > td, th -->
+    <table>
+        <!-- caption 태그는 테이블의 제목 -->
+        <caption>프로필 테이블</caption>
+        <!-- th는 기본적으로 글꼴이 굵고 가운데 정렬임, td는 기본 글임 -->
+        <tr>
+            <th>이름</th>
+            <th>취미</th>
+            <th>특기</th>
+        </tr>
+        <tr>
+            <td>조정모</td>
+            <td>게임</td>
+            <td>코딩</td>
+        </tr>
+        <tr>
+            <td>김민서</td>
+            <td>롤체</td>
+            <td>요리</td>
+        </tr>
+        <tr>
+            <td>이석현</td>
+            <td>세트</td>
+            <td>연기</td>
+        </tr>
+    </table>
+    
+    <hr>
+    
+    <h1>Table 그룹 태그</h1>
+    <!-- thead, tbody, tfoot은 최상단(머리 | caption 제외), 중간(몸), 최하단(발)로 영역으로 묶는 태그-->
+    <table>
+        <caption>학급</caption>
+        
+        <!-- t신체 트리오랑 다르게 colgroup은 행으로 묶기에 col을 수에 맞게 지정한다. -->
+        <!-- colgroup > col -->
+        <colgroup>
+            <col style="background-color: rosybrown;">
+            <col style="width: 200px;">
+            <col>
+        </colgroup>
+        
+        <!-- 열 병합은 colspan, 행 병합은 rowspan -->
+        <thead>
+            <tr>
+                <th>반</th>
+                <th>이름</th>
+                <th>번호</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <!-- tfoot으로 구별되어서 3이 최대 -->
+                <td rowspan="3">4</td>
+                <td>조정모</td>
+                <td>16</td>
+            </tr>
+            <tr>
+                <td>신홍명</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>김희성</td>
+                <td>8</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">평균</td>
+                <td>20</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
